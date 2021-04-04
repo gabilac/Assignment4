@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Restaurant Finder Home";
+}
+
+@*model*@
+@model IEnumerable<string>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h4>
+        Welcome to the Restaurant Finder.
+        Discover good places to eat and suggest some more.
+        Check out the current best 5 Restaurants!
+    </h4>
+
+    <header>
+        <h2>Top 5 Restaurants in Provo</h2>
+    </header>
+
+    <ul>
+        @foreach (string i in Model)
+        {
+            <li>@i</li>
+        }
+    </ul>
+
+    @*suggestion page*@
+    <a class="btn btn-center btn-dark" asp-action="EnterSuggestion">Suggest A Restaurant</a>
+</body>
+
+</html>

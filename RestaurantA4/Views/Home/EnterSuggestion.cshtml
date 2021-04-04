@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Suggest a Restaurant";
+}
+
+@model RestaurantA4.Models.Suggestion
+@*variables from newmovie.cs in models*@
+<form asp-action="EnterSuggestion" method="post">
+    <div>
+        <label asp-for="Name">Your Name: </label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="RestName">Restaurant Name: </label>
+        <input asp-for="RestName" />
+    </div>
+
+    <div>
+        <label asp-for="FavDish">Favorite Dish: </label>
+        <input asp-for="FavDish" />
+    </div>
+
+    <div>
+        <label asp-for="Phone">Restaurant Phone #: </label>
+        <input asp-for="Phone" />
+    </div>
+
+    @Html.ValidationMessageFor(m => m.Phone)
+
+    <br />
+    <button type="submit">Submit Suggestion</button>
+</form>
+

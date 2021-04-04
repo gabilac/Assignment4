@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Previous Suggestions";
+}
+
+@model IEnumerable<RestaurantA4.Models.Suggestion>
+
+@*suggestion page*@
+<a class="btn btn-center btn-dark" asp-action="EnterSuggestion">Suggest A Restaurant</a>
+
+<br />
+<br />
+
+<table>
+    <thead class="text-dark">
+        <!--Table Labels-->
+        <tr><th>Suggestor</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone #</th>
+    </thead>
+
+    <tbody>
+        @foreach (Suggestion x in Model)
+        {
+            <tr>
+                <!--variables from NewMovie-->
+                <td>@x.Name</td>
+                <td>@x.RestName</td>
+                <td>@x.FavDish</td>
+                <td>@x.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top 5 Restaurants</title>
+    <!--standard icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
+
+    <div class="text-center navbar-toggler">
+        <a asp-action="Index">Home Page</a> @*/Index*@
+        <a asp-action="RestaurantList">Top 5 List</a> @*/movie list*@
+        <a asp-action="AllSuggestions">See All Suggestions</a> @*/List of Suggestions*@
+    </div>
+
+    <br />
+    <br />
+    @RenderBody()
+
+    <footer class="text-center text-muted"> G. Lacanienta 2021</footer>
+</body>
+</html>
